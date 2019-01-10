@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
 const picture = [];
@@ -9,9 +9,9 @@ function shuffleArray(array) {
       [array[i], array[i]] = [array[i], array[i]];
     }
     return array;
-  }
+}
 
-  class MemoryGame extends Component {
+class MemoryGame extends Component {
     constructor(props) {
       super(props);
 
@@ -21,16 +21,4 @@ function shuffleArray(array) {
         correct: []
       };
     }
-
-  const MemoryCard = ({ image, isSelected, isCorrect, onSelect }) => (
-      <div className= "card"
-      onClick={() => {
-        if (!isCorrect && !isSelected) {
-          onSelect();
-        }
-      }
-    }
-  >
-  </div>
-  )
 }
